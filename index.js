@@ -7,17 +7,26 @@ const ngrok = require('ngrok');
 })();
 
 
-const app = express();
-const PORT = process.env.PORT || 3030;
 
-// your code
+const app = express()
+const PORT = 4000
 
 app.listen(PORT, () => {
-    console.log(`server started on port ${PORT}`);
-});
+  console.log(`API listening on PORT ${PORT} `)
+})
+
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
+app.get('/about', (req, res) => {
+  res.send('This is my about route..... ')
+})
+
 
 app.get('/url', (req, res) => {
     res.send(url);
 });
 
+// Export the Express API
 module.exports = app
