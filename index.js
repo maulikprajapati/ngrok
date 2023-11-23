@@ -1,10 +1,10 @@
 const express = require("express");
 let url;
-const ngrok = require('ngrok');
-(async function () {
-    url = await ngrok.connect();
-    console.log('==========CONNECTED=================', url)
-})();
+// const ngrok = require('ngrok');
+// (async function () {
+//     url = await ngrok.connect();
+//     console.log('==========CONNECTED=================', url)
+// })();
 
 
 
