@@ -24,8 +24,9 @@ app.get('/about', (req, res) => {
 })
 
 
-app.get('/url', (req, res) => {
-    res.send(url);
+app.get('/*', (req, res) => {
+  console.log(req.url);
+    res.redirect(`https://zijpendaal.nobilex-dev${req.url}`);
 });
 
 // Export the Express API
