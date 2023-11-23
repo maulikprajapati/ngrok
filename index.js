@@ -19,3 +19,5 @@ app.listen(PORT, () => {
 app.get('/url', (req, res) => {
     res.send(url);
 });
+
+module.exports = app
